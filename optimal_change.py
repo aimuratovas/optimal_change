@@ -7,7 +7,7 @@ def optimal_change(item_cost, amount_paid):
     result_without_and = f"The optimal change for an item that costs ${item_cost} with an amount paid of ${amount_paid} is "
     residual = 0
     ls_of_amount = []
-    while not math.isclose(change, 0.0):
+    while round(change, 10) != 0.0:
         # $100
         if change >= 100:
             residual = math.floor(change/100)
